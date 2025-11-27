@@ -1,0 +1,317 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ------------ Home - hero ------------- */
+
+#hero {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero > .container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+}
+#hero > .container > h1 {
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 16px rgba(68, 248, 143, 0.589);
+}
+
+#hero > .container > h2 {
+    color: rgb(179, 179, 179);
+    margin: 32px 0px;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+#hero > .container > a {
+    background: linear-gradient(90deg, #44f88f, rgb(30, 173, 255));
+    padding: 18px 28px;
+    border-radius: 32px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: black;
+    transition: box-shadow 0.3s ease, transform 0.5s ease;
+}
+
+#hero > .container > a:hover {
+    box-shadow: 0px 5px 24px rgba(68, 248, 143, 0.438);
+    transform: translateY(-5px);
+}
+
+/* ---------------- Aside - main (DIV) ---------------- */
+
+.aside-main {
+    margin: auto;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    gap: 16px;
+}
+
+aside {
+    flex: 0 1 300px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+/* ---------------- Aside - POPULAR BOOKS ---------------- */
+
+#aside-popular-books {
+    background-color: #0A0A1A;
+    border-radius: 8px;
+    margin: 0px 16px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.list-title {
+    padding: 16px 16px 0px 16px;
+}
+
+.list-title > h2{
+    font-size: 20px;
+}
+
+.list-type {
+    margin: 14px 16px 16px 16px;
+    background-color: #121225;
+    display: flex;
+    border-radius: 8px;
+    overflow-x: hidden;
+}
+
+.list-type > span {
+    flex: 1 1 100px;
+    text-align: center;
+    color: rgb(179, 179, 179);
+    padding: 8px 0px;
+}
+
+.list-type > span:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #1E1E30;
+}
+
+.list-type > .selection{
+    background-color: #121E2A;
+    color: #44f88f;
+}
+
+.list-type > .selection:hover{
+    background-color: #121E2A;
+}
+
+.list-home {
+    height: 413px;
+    border-top: 1px solid rgba(255, 255, 255, 0.103);
+    padding: 16px 16px 16px;
+    list-style-type: none;
+}
+
+.list-home-op {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.103);
+}
+
+.list-home > .end {
+    border-bottom: none;
+}
+
+.list-home-op:hover {
+    background-color: #121225;
+}
+
+.list-img {
+    border-radius: 4px;
+    width: 50px;
+    height: 70px;
+    margin: 12px;
+    overflow: hidden;
+}
+
+.list-img > a > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.list-home-op:hover > .list-img > a > img{
+    transform: scale(1.1);
+}
+
+.list-info {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.list-info > a {
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.list-info > a:hover > h3{
+    color: #44f88f;
+}
+
+.list-info > i {
+    display: flex;
+    align-items: center;
+}
+
+.list-info > i > span{
+    margin: 10px 8px 0px 0px;
+    font-size: 14px;
+    color: rgb(179, 179, 179);
+}
+
+.list-info > i > .material-icons {
+    font-size: 14px;
+    color: #44f88f;
+}
+
+/* ---------------- Main - categorie scroll  ---------------- */
+
+main {
+    flex: 1 1 650px; /* ← ESSA É A CHAVE */
+    min-width: 0;    /* ← PERMITE ENCOLHER DE VERDADE */
+}
+
+main > #categories-list {
+    background-color: #0A0A1A;
+    border-radius: 8px;
+    margin: 0px 16px;
+    display: flex;
+}
+
+main > #categories-list > .container {
+    width: 100%;
+    padding:  0px 16px;
+}
+
+.categories-scroll {
+    max-width: 100%;
+    display: flex;
+    gap: 10px;
+    padding: 24px 0px 16px 0px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #44f88f #0A0A1A;
+    white-space: nowrap;
+}
+
+.categories-scroll > a{
+    background: linear-gradient(90deg, #11292D, #112436);
+    border: 1px solid rgba(255, 255, 255, 0.103);
+    border-radius: 32px;
+    padding: 8px 16px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.categories-scroll > a:hover{
+    background: linear-gradient(90deg, #44f88f, rgb(30, 173, 255));
+    color: #0A0A1A;
+    transform: translateY(-5px);
+}
+
+/* ----------------- Livros mais vistos ----------------- */
+
+main > #more-see-book {
+    background-color: #0A0A1A;
+    border-radius: 8px;
+    margin: 16px;
+    display: flex;
+}
+
+#more-see-book > .container {
+    width: 100%;
+}
+.container > .more-title {
+    padding: 16px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.103);
+}
+
+.container > .more-content ul{
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap-reverse;
+}
+
+.container > .more-content li{
+    margin: 16px;
+    flex: 1 1 220px;
+    background-color: #1B1B2E;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.container > .more-content li:hover{
+    transform: translateY(-5px);
+}
+
+.more-img {
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+}
+
+.more-img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.more-img > img:hover {
+    transform: scale(1.1);
+}
+
+.more-info {
+    padding: 0px 16px;
+}
+
+.more-info > h3 {
+    font-size: 16px;
+    padding: 16px 0px;
+}
+
+.more-info > .new-cap {
+    font-size: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.more-info > .new-cap > a {
+    text-decoration: none;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #1E1E30;
+    border-radius: 8px;
+    
+}
+
+.more-info > .new-cap > a:hover {
+    background-color: #26263b; 
+}
+
+
