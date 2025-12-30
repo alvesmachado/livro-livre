@@ -233,14 +233,14 @@ main > #categories-list > .container {
 
 /* ----------------- Livros mais vistos ----------------- */
 
-main > #more-see-book {
+main > .more-see-book {
     background-color: #0A0A1A;
     border-radius: 8px;
     margin: 16px;
     display: flex;
 }
 
-#more-see-book > .container {
+.more-see-book > .container {
     width: 100%;
 }
 .container > .more-title {
